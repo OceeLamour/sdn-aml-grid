@@ -1,0 +1,25 @@
+{
+  "name": "sdn-aml-grid-project",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "sdn-aml-grid",
+    "aml-web-scraper"
+  ],
+  "scripts": {
+    "frontend:dev": "cd sdn-aml-grid && npm run dev",
+    "scraper:dev": "cd aml-web-scraper && npm run dev",
+    "dev": "concurrently \"npm run frontend:dev\" \"npm run scraper:dev\"",
+    "install:all": "npm install && npm run install:frontend && npm run install:scraper",
+    "install:frontend": "cd sdn-aml-grid && npm install",
+    "install:scraper": "cd aml-web-scraper && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
