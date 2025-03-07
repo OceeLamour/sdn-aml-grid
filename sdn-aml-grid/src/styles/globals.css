@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #10B981; /* Emerald-500 */
+  --primary-dark: #059669; /* Emerald-600 */
+  --primary-light: #34D399; /* Emerald-400 */
+  --secondary: #1E40AF; /* Blue-800 */
+  --background: #F1F5F9; /* Slate-50 */
+  --text: #0F172A; /* Slate-800 */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-500 text-white px-6 py-2 rounded-md hover:bg-emerald-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-emerald-500 px-6 py-2 rounded-md hover:bg-slate-100 transition-colors border border-emerald-500;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+  }
+  
+  .input {
+    @apply border p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-emerald-500;
+  }
+}
